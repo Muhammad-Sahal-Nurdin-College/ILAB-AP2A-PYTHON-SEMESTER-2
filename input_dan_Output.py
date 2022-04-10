@@ -62,6 +62,7 @@ str1 = 'Universitas'
 str2 = 'Gunadarma'
 print(str1, str2, sep='*')
 """
+
 # PRELAB 2.4 Menulis Program
 """Buat sebuah program yang menghitung rata-rata dari nilai tiga ujian. 
 Program tersebut meminta pengguna memasukkan tiga nilai ujian, menghitung rata-rata dari ketiga ujian tersebut, dan 
@@ -185,3 +186,131 @@ total_Penjualan = int(input('Masukkan total penjualan tahun ini: '))
 prediksi = total_Penjualan * 0.23
 print(f'Keuntungan tahun ini adalah Rp. {prediksi:,.2f}')
 
+# PRELAB 2.5 Fungsi
+# Soal No. 4
+"""Tuliskan sebuah fungsi  bernama hitung_imt yang menghitung Indeks Massa Tubuh (IMT) seseorang. 
+IMT sering digunakan untuk menentukan apakah seseorang mempunyai berat badan berlebih atau kurang. IMT dihitung dengan 
+rumus berikut:
+
+IMT=Berat(kg)/Tinggi(m)2
+
+Fungsi Anda menerima dua argumen, berat dan tinggi, dan mengembalikan nilai IMT.
+
+Contoh pemanggilan fungsi dan nilai return yang diharapkan dapat dilihat pada tabel di bawah."""
+# Jawab:
+# Tuliskan fungsi Anda di bawah
+def hitung_imt(berat,tinggi):
+    imt = berat/(tinggi*tinggi)
+    return imt
+
+
+# Soal No. 5
+""" Lengkapi program di bawah sehingga program tersebut meminta pengguna memasukkan jarak dalam satuan mil, 
+mengkonversi jarak tersebut ke km, dan menampilkan hasilnya. Proses konversi ke km dikerjakan oleh fungsi bernama 
+konversi_ke_km. Rumus konversi jarak dari mil ke km adalah sebagai berikut:
+Km=Mil×1.6
+"""
+# Jawab:
+
+# Fungsi konversi_ke_km
+# [1] Tambahkan parameter yang diperlukan
+def konversi_ke_km(mil):
+    # [2] Konversi argumen ke km dan kembalikan hasilnya.
+    km = mil * 1.6
+    return km
+
+# Fungsi main
+def main():
+    # [3] Minta pengguna memasukkan jarak dalam mil dalam tipe floating point
+    mil = float(input('Masukkan jarak dalam mil: '))
+
+    # [4] Panggil fungsi konversi_ke_km
+    konversi = konversi_ke_km(mil)
+
+    # [5] Tampilkan hasil konversi
+    print(f'Jarak dalam km = {konversi:.2f}')
+
+main()
+
+# PRELAB 2.5 Fungsi
+"""Populasi sebuah kota bertambah secara eksponensial mengikuti rumus berikut:
+
+P=P0e0.1t
+
+P adalah total populasi setelah waktu t, P0 adalah populasi awal,  dan t adalah waktu dalam tahun.
+
+Lanjutkan program di bawah sehingga program tersebut meminta pengguna memasukkan populasi awal suatu kota (P0) dan waktu
+dalam tahun (t) lalu menghitung populasi setelah waktu t tersebut dan menampilkannya ke output. Program memanggil 
+fungsi hitung_populasi untuk menghitung populasi setelah waktu t.
+"""
+# Jawab:
+# [1] Import module math
+import math
+
+
+# Fungsi hitung_populasi
+# [2] Tuliskan parameter-parameter yang diperlukan
+def hitung_populasi(p, t):
+    # [3] Hitung populasi setelah waktu t. Gunakan fungsi dalam module math.
+    # Bulatkan ke bawah hasil penghitungan (hilangkan nilai desimalnya). Misal: hasil penghitungan 754595.685 maka nilai
+    # yang dikembalikan fungsi ini adalah 754595.
+    total = p * math.exp(0.1 * t)
+    return total
+
+
+# Fungsi main
+def main():
+    # [4] Minta input pengguna untuk populasi awal. Prompt 'Masukkan populasi awal: '
+    p = int(input('Masukkan populasi awal: '))
+
+    # [5] Minta input pengguna untuk waktu. Prompt 'Masukkan waktu dalam tahun: '
+    t = int(input('Masukkan waktu dalam tahun: '))
+
+    # [6] Hitung populasi setelah waktu t dengan memanggil fungsi hitung_populasi
+    a = hitung_populasi(p, t)
+
+    # [7] Tampilkan populasi akhir: Populasi akhir = <nilai_populasi_akhir>
+    print(f'Populasi akhir = {math.floor(a)}')
+
+
+# Panggil fungsi main
+main()
+
+# Lab activity
+"""Dalam fisika, sebuah object yang bergerak disebut memiliki energi kinetik. Rumus berikut dapat digunakan untuk menari 
+energi kinetik dari seubah object bergerak:
+
+Ek=12mv2
+
+Dimana Ek adalah energi kinetik, m adalah massa object dalam kilogram, dan v adalah kecepatan object dalam satuan meter 
+per detik.
+
+Tuliskan sebuah fungsi bernama energi_kinetik yang menerima argumen massa object (dalam kg) dan kecepatan object (dalam 
+meter per detik). Fungsi tersebut mengembalikan energi kinetik yang dimiliki object tersebut.
+
+Contoh pemanggilan fungsi yang diminta beserta nilai returnnya dapat dilihat pada tabel di bawah."""
+# Jawab:
+import math
+
+
+# Fungsi luas_lingkaran
+def luas_lingkaran(radius):
+    return math.pi * radius * radius
+
+
+# Fungsi keliling_lingkaran():
+def keliling_lingkaran(radius):
+    return 2 * math.pi * radius
+
+
+# Fungsi main
+def main():
+    radius = float(input('Masukkan radius lingkaran (cm): '))
+    luas = luas_lingkaran(radius)
+    keliling = keliling_lingkaran(radius)
+    print(f'Luas lingkaran dengan radius {radius:.2f} = {luas:.2f} cm2')
+    print(f'Keliling lingkaran dengan radius {radius:.2f} = {keliling:.2f} cm2')
+
+
+# Panggil fungsi main
+main()
