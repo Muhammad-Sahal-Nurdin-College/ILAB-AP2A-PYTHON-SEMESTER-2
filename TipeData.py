@@ -216,7 +216,7 @@ def main():
         for i in range(JUMLAH_UJIAN):
             nilai = float(input(f'Masukkan nilai ujian ke-{i + 1}: '))
             total += nilai
-        nilai_ujian.append(total / JUMLAH_UJIAN):
+        nilai_ujian.append(total / JUMLAH_UJIAN)
         print('=' * 50)
 
     # [3] Gunakan nested loop untuk menghitung dan menampilkan rata-rata nilai ujian
