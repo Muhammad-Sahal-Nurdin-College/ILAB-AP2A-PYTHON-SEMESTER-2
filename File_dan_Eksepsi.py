@@ -390,29 +390,33 @@ def main():
 main()
 
 # Nomor 4
-temps = []
-f = open('temps.txt')
-for line in f.readlines():
-    temps.append(float(line))
-f.close()
+def main():
+    # List untuk menyimpan isi file
+    # [1] Tuliskan statement yang meminta pengguna memasukkan nama file dengan prompt: Masukkan nama file: "
+    data = []
+    d = input('Masukkan nama file: ')
+    # [2] Tuliskan exception handler dengan statement try/except
+    # Pada body klausa try: buka file, baca isinya, dan simpan isinya ke list_angka
+    # Pada body klausa except untuk FileNoFoundError tampilkan pesan "File tidak ditemukan."
+    # Pada body klausa except untuk ValueError tampilkan pesan "Terdapat data non numerik dalam file."
+    # Pada body klausa else: Cari rata-rata, nilai tertinggi, nilai terenda dan tampilkan hasilnya
 
-lowest = temps[0]
-highest = temps[0]
+    try:
+        dim = open(d, 'r')
+        for i in dim:
+            y = float(i)
+            data.append(y)
 
-for t in temps:
-    if t < lowest:
-        lowest = t
-    if t > highest:
-        highest = t
 
-print('Lowest temp = '+str(lowest))
-print('Highest temp = '+str(highest))
-nilai_terendah = min(number_list)
-    nilai_tertinggi = max(number_list)
-    rata_rata = sum(number_list) / len(number_list)
-    x = "{:.2f}".format(rata_rata)
+    except FileNotFoundError:
+        print('File tidak ditemukan.')
+    except ValueError:
+        print('Terdapat data non numerik dalam file.')
+    else:
+        print('Rata-rata nilai:', round(sum(data) / len(data), 2))
+        print('Nilai tertinggi:', max(data))
+        print('Nilai terendah:', min(data))
 
-    # [4] Tampilkan rata-rata, nilai tertinggi, dan nilai terendah.
-    print('Rata-rata nilai ujian: ', x)
-    print('Nilai ujian tertinggi: ', nilai_tertinggi)
-    print('Nilai ujian terendah: ', nilai_terendah)
+
+# Panggil fungsi main
+main()
