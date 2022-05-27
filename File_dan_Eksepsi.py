@@ -389,3 +389,30 @@ def main():
 # Panggil fungsi main
 main()
 
+# Nomor 4
+temps = []
+f = open('temps.txt')
+for line in f.readlines():
+    temps.append(float(line))
+f.close()
+
+lowest = temps[0]
+highest = temps[0]
+
+for t in temps:
+    if t < lowest:
+        lowest = t
+    if t > highest:
+        highest = t
+
+print('Lowest temp = '+str(lowest))
+print('Highest temp = '+str(highest))
+nilai_terendah = min(number_list)
+    nilai_tertinggi = max(number_list)
+    rata_rata = sum(number_list) / len(number_list)
+    x = "{:.2f}".format(rata_rata)
+
+    # [4] Tampilkan rata-rata, nilai tertinggi, dan nilai terendah.
+    print('Rata-rata nilai ujian: ', x)
+    print('Nilai ujian tertinggi: ', nilai_tertinggi)
+    print('Nilai ujian terendah: ', nilai_terendah)
