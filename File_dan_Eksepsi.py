@@ -84,7 +84,8 @@ def main():
         d2 = input_dim.readline()
         d3 = input_dim.readline()
         d4 = input_dim.readline()
-    d = d1.rstrip(\n)
+
+    """d = d1.rstrip(\n)
     i = d2.rstrip(\n)
     m = d3.rstrip(\n)
     a = d4.rstrip(\n)
