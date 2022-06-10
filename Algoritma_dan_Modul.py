@@ -205,22 +205,4 @@ def median(data):
 
 # Module
 
-# [1] import module yang Anda tulis
-
-
-
-# Fungsi main menguji module
-def main():
-
-# [2] Minta pengguna untuk memasukkan alas dan tinggi
-
-
-# [3] Hitung luas dan keliling dengan menggunakan fungsi pada module
-
-
-# [4] Tampilkan luas dan keliling dengan presisi 2 desimal
-
-
-# Panggil fungsi main
-
 

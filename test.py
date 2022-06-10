@@ -1,18 +1,24 @@
-import math
-# segitigasiku.py
-# Module segitigasiku berisi fungsi-fungsi yang melakukan
-# kalkulasi terkait persegipanjang
+# [1] import module yang Anda tulis
+import segitigasiku
 
-# Fungsi luas menerima alas dan tinggi sebagai argumen
-# dan mengembalikan luas persegi panjang
-def luas(alas, tinggi):
-    return (alas * tinggi)/2
-# Fungsi keliling menerima alas dan tinggi sebagai argumen
-# dan mengembalikan keliling persegi panjang
-def keliling(alas, tinggi):
-    sisimiring = math.sqrt(pow(alas, 2) + pow(tinggi, 2))
-    keliling = alas + tinggi + sisimiring
-    return keliling
+# Fungsi main menguji module
+
+
+def main():
+    # [2] Minta pengguna untuk memasukkan alas dan tinggi
+    lebar = float(input('Masukkan panjang alas (cm): '))
+    panjang = float(input('Masukkan tinggi (cm): '))
+    num1 = segitigasiku.luas(lebar, panjang)
+    print(f'Luas segitiga:{num1:.2f} cm2')
+    num2 = segitigasiku.keliling(lebar, panjang)
+    print(f'Keliling segitiga:{num2:.2f} cm')
+
+    # [3] Hitung luas dan keliling dengan menggunakan fungsi pada module
+    # [4] Tampilkan luas dan keliling dengan presisi 2 desimal
+
+# Panggil fungsi main
+main()
+
 
 
 
