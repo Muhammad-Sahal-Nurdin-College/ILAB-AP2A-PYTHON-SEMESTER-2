@@ -206,7 +206,7 @@ def median(data):
 # Module
 
 # [1] import module yang Anda tulis
-import segitigasiku
+
 
 
 # Fungsi main menguji module
