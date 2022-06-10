@@ -418,6 +418,6 @@ def main():
         print('Nilai tertinggi:', max(data))
         print('Nilai terendah:', min(data))
 
-
+"""
 # Panggil fungsi main
 main()
