@@ -1,4 +1,5 @@
 import math
+import statistics
 
 # Fungsi mean(data)
 """ Fungsi mean(data): menerima sebuah argumen bertipe list dan mengembalikan rata-rata dari nilai-nilai pada list 
@@ -38,6 +39,9 @@ def std(data):
 """
 
 
+def median(data):
+    return statistics.median(data)
+"""
 def sortir(data):
     # [1] Tuliskan kode algoritma penyortiran di bawah
     # Base Cases
@@ -70,4 +74,4 @@ def median(data):
     else:
         m1 = int(len(data) / 2 - 1)
         m2 = int(len(data) / 2)
-        return (data[m1] + data[m2]) / 2
+        return (data[m1] + data[m2]) / 2 """

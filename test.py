@@ -1,8 +1,9 @@
 import statistik
 
 
+
 def main():
-    data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    data = [1000, 900, 800, 700, 600, 500, 400, 300, 200, 100]
     num1 = statistik.mean(data)
     print(f'Mean dari data:{num1:.2f}')
     num2 = statistik.var(data)
