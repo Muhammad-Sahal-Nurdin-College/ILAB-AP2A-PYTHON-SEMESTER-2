@@ -215,18 +215,33 @@ import statistik
 # dan menampilkan statistik dari data dalam sebuah file
 def main():
     # [2] Minta user memasukkan nama file yang berisi data
-    # dengan prompt: 'Masukkan nama file: '
-    x = float(input('Masukkan nama file: '))
+    # dengan prompt: 'Masukkan nama fxle: '
+    data = []
+    x = input('Masukkan nama file: ')
 
     # [3] Struktur try/except untuk error file tidak ditemukan
     # dan file berisi data non numerik
     # Baca isi file dan gunakan fungsi-fungsi pada module yang Anda tulis
     # untuk mendapatkan nilai mean, variansi, standard deviasi, median dan modus.
     # Dan tampilkan nilai-nilai tersebut dengan presisi dua desimal.
-    print(f'Mean dari data:{')
-    print(f'Variansi dari data:{')
-    print(f'Standar Deviasi dari data:{')
-    print(f'Median dari data:{')
+    try:
+        dim = open(x, 'r')
+        for i in dim:
+            y = float(i)
+            data.append(y)
+    except FileNotFoundError:
+        print('File', x, 'tidak ditemukan.')
+    except ValueError:
+        print('File', x, 'berisi data non numerik.')
+    else:
+        num1 = statistik.mean(data)
+        print(f'Mean dari data:{num1:2.f}')
+        num2 = statistik.var(data)
+        print(f'Variansi dari data:{num2:2.f}')
+        num3 = statistik.std(data)
+        print(f'Standar Deviasi dari data:{ num3:2.f}')
+        num4 = statistik.median(data)
+        print(f'Median dari data:{num4:2.f}')
 
 
 # Panggil fungsi main
