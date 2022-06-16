@@ -2,22 +2,22 @@
 # Attribute: __pabrikan, __model, dan __kecepatan
 # Method: akselerasi(), rem(), get_kecepatan()
 class Mobil:
-    def __init__(self, pabrikan, model):
+    def __init__(self, pabrikan, model, kecepatan=0):
         self.__pabrikan = pabrikan
         self.__model = model
-        self.__kecepatan = 0
+        self.__kecepatan = kecepatan
 
-    def akselerasi(self, __kecepatan):
+    def akselerasi(self):
         self.__kecepatan += 5
 
-    def rem(self, __kecepatan):
-        self.__kecepatan -= 5
-        if self.__kecepatan <= 0:
-            self.__kecepatan = 'Tidak Bisa'
+    def rem(self):
+
+        if self.__kecepatan > 0:
+            self.__kecepatan -= 5
         else:
             self.__kecepatan = 0
 
-    def get_kecepatan(self, ):
+    def get_kecepatan(self):
         return self.__kecepatan
 
 # [1] Tuliskan method __init__ yang menerima argumen pabrikan dan model

@@ -1,18 +1,23 @@
-import statistik
+# [1] import module yang anda buat
+import pet
 
 
-
+# Fungsi main menguji module
 def main():
-    data = [1000, 900, 800, 700, 600, 500, 400, 300, 200, 100]
-    num1 = statistik.mean(data)
-    print(f'Mean dari data:{num1:.2f}')
-    num2 = statistik.var(data)
-    print(f'Variansi dari data:{num2:.2f}')
-    num3 = statistik.std(data)
-    print(f'Standar Deviasi dari data:{ num3:.2f}')
-    num4 = statistik.median(data)
-    print(f'Median dari data:{num4:.2f}')
+    # [2] Minta pengguna menginput nama, jenis dan umur
+    x = input('Siapa nama hewan peliharaan Anda?', )
+    Y = input('Jenis hewan apa peliharaan Anda?', )
+    Z = input('Berapa umur hewan peliharaan Anda?', )
 
+    # [3] Buat objek hewan
+    hewan = pet.Pet()
+
+    # [4] Tampilkan nama,jenis dan umur
+    print('Nama: ', )
+    print('Jenis hewan: ', )
+    print('Umur (tahun): ', )
+
+
+# Panggil fungsi main
 main()
-
 
