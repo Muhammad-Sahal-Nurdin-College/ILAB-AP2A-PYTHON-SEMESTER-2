@@ -8,7 +8,8 @@ def main():
     pickup = kendaraan.Pickup('Toyota', 'Hilux', 350000000, '4WD')
     # Buat object SUV
     suv = kendaraan.SUV('Hyundai', 'Santa Fe', 550000000, 6)
-    print('Data Kendaraan')    print('=================')
+    print('Data Kendaraan')
+    print('=================')
     # Tampilkan data Sedan
     print('Merek:', sedan.get_merek())
     print('Model:', sedan.get_model())
